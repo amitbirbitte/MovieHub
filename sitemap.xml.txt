@@ -13,4 +13,16 @@
     <loc>https://amitbirbitte.github.io/kannadamoviehub/movies/sapta-side-a.html</loc>
   </url>
 
+<url>
+  <loc>https://amitbirbitte.github.io/kannadamoviehub/categories/explained.html</loc>
+</url>
+<url>
+  <loc>https://amitbirbitte.github.io/kannadamoviehub/categories/reviews.html</loc>
+</url>
+<url>
+  <loc>https://amitbirbitte.github.io/kannadamoviehub/categories/ott.html</loc>
+</url>
+
+
 </urlset>
+
