@@ -1,36 +1,242 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
+/* Global Reset */
+* {
+  box-sizing: border-box;
 }
 
+/* Body */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* Header */
 header {
-  background: #111;
-  color: #fff;
-  padding: 20px;
+  background: linear-gradient(135deg, #111, #b71c1c);
+  color: white;
+  padding: 40px 20px;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+  margin-top: 15px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  background: white;
+  color: black;
+}
+
+/* Navigation */
 nav {
-  background: #d32f2f;
-  padding: 10px;
+  background: #111;
+  padding: 12px;
   text-align: center;
 }
 
 nav a {
   color: #fff;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 14px;
 }
 
+nav a:hover {
+  color: #ff5252;
+}
+
+/* Main Layout */
 main {
-  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
 }
 
+/* Section Title */
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-left: 5px solid #b71c1c;
+  padding-left: 10px;
+}
+
+/* Card Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Content */
+.card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Card Links */
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card a:hover h3 {
+  color: #b71c1c;
+}
+
+/* Footer */
 footer {
   background: #111;
-  color: #fff;
+  color: #aaa;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  font-size: 13px;
+}
+
+/* ===================== */
+/* 🌙 DARK MODE */
+/* ===================== */
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #000, #1f1f1f);
+}
+
+body.dark nav {
+  background: #000;
+}
+
+body.dark nav a {
+  color: #e0e0e0;
+}
+
+body.dark nav a:hover {
+  color: #ff5252;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark .card p {
+  color: #aaa;
+}
+
+body.dark footer {
+  background: #000;
+  color: #888;
+}
+
+body.dark #themeToggle {
+  background: #333;
+  color: white;
+}
+
+/* ===================== */
+/* 📱 MOBILE RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  main {
+    padding: 20px 15px;
+  }
+
+  .card img {
+    height: 300px;
+  }
+}
+
+/* Sticky Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Smooth page load */
+body {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card hover animation enhancement */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
 }
