@@ -2,36 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>KannadaMovieHub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+
+  <!-- Primary SEO -->
+  <title>KannadaMovieHub | Kannada Movies Reviews & Explained</title>
+  <meta name="description" content="KannadaMovieHub brings Kannada movie reviews, story explanations, OTT updates, and cinema insights in simple Kannada & English.">
+  <meta name="keywords" content="Kannada movies, Kannada movie reviews, Kannada movies explained, Kannada OTT movies">
+  <meta name="author" content="KannadaMovieHub">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph (Facebook / WhatsApp) -->
+  <meta property="og:title" content="KannadaMovieHub | Kannada Movies Reviews & Explained">
+  <meta property="og:description" content="Honest Kannada movie reviews, story explanations, OTT updates & cinema content.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amitbirbitte.github.io/kannadamoviehub/">
+  <meta property="og:image" content="https://amitbirbitte.github.io/kannadamoviehub/images/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KannadaMovieHub">
+  <meta name="twitter:description" content="Kannada movies reviews & explained in simple words.">
+  <meta name="twitter:image" content="https://amitbirbitte.github.io/kannadamoviehub/images/og-image.jpg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-    <header>
-        <h1>KannadaMovieHub</h1>
-        <p>Kannada Movies | Reviews | Explained</p>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <h1>KannadaMovieHub</h1>
+    <p>Kannada Movies | Reviews | Explained</p>
+    <button id="themeToggle">🌙 Dark Mode</button>
+  </header>
 
-    <nav>
-        <a href="#">Movie Explained</a>
-        <a href="#">Reviews</a>
-        <a href="#">OTT Movies</a>
-        <a href="#">Upcoming</a>
-    </nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#">Movie Explained</a>
+    <a href="#">Reviews</a>
+    <a href="#">OTT Movies</a>
+    <a href="#">Upcoming</a>
+  </nav>
 
-    <main>
-        <h2>Welcome to KannadaMovieHub</h2>
-        <p>
-            Namma Kannada cinema reviews mattu movie explanations simple way nalli.
-        </p>
-    </main>
+  <!-- MAIN CONTENT -->
+  <main>
 
-    <footer>
-        <p>© 2026 KannadaMovieHub</p>
-    </footer>
+    <!-- MOVIE EXPLAINED -->
+    <h2 class="section-title">Latest Movie Explained</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <a href="movies/sapta-side-a.html">
+          <img src="images/sse-A.webp" alt="Sapta Sagaradaache Ello Side A">
+          <h3>Sapta Sagaradaache Ello – Side A</h3>
+          <p>Ending explanation simple way nalli.</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="movies/kantara.html">
+          <img src="images/kantara.jpg" alt="Kantara Movie">
+          <h3>Kantara</h3>
+          <p>Climax meaning mattu hidden message explained.</p>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- REVIEWS -->
+    <h2 class="section-title" style="margin-top:40px;">Latest Reviews</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <a href="#">
+          <h3>Latest Kannada Movie</h3>
+          <p>Honest review – story, acting mattu overall verdict.</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="#">
+          <h3>Underrated Kannada Movie</h3>
+          <p>Nodade idre miss madbedi anta movie review.</p>
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 KannadaMovieHub</p>
+  </footer>
+
+  <!-- DARK / LIGHT MODE SCRIPT -->
+  <script>
+  const toggleBtn = document.getElementById("themeToggle");
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "🌞 Light Mode";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      toggleBtn.textContent = "🌞 Light Mode";
+      localStorage.setItem("theme", "dark");
+    } else {
+      toggleBtn.textContent = "🌙 Dark Mode";
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
 
 </body>
-
 </html>
